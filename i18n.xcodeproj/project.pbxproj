@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		7CE60F2B1C459B66008CE1E4 /* i18n.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CE60F2A1C459B66008CE1E4 /* i18n.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7CE60F351C459C6D008CE1E4 /* ISO3166.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE60F321C459C6D008CE1E4 /* ISO3166.swift */; };
+		7CE60F361C459C6D008CE1E4 /* ISO4217.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE60F331C459C6D008CE1E4 /* ISO4217.swift */; };
+		7CE60F371C459C6D008CE1E4 /* LocalizedStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE60F341C459C6D008CE1E4 /* LocalizedStringConvertible.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7CE60F271C459B66008CE1E4 /* i18n.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = i18n.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CE60F2A1C459B66008CE1E4 /* i18n.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = i18n.h; sourceTree = "<group>"; };
 		7CE60F2C1C459B66008CE1E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CE60F321C459C6D008CE1E4 /* ISO3166.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISO3166.swift; sourceTree = "<group>"; };
+		7CE60F331C459C6D008CE1E4 /* ISO4217.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISO4217.swift; sourceTree = "<group>"; };
+		7CE60F341C459C6D008CE1E4 /* LocalizedStringConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedStringConvertible.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +52,9 @@
 		7CE60F291C459B66008CE1E4 /* i18n */ = {
 			isa = PBXGroup;
 			children = (
+				7CE60F321C459C6D008CE1E4 /* ISO3166.swift */,
+				7CE60F331C459C6D008CE1E4 /* ISO4217.swift */,
+				7CE60F341C459C6D008CE1E4 /* LocalizedStringConvertible.swift */,
 				7CE60F2A1C459B66008CE1E4 /* i18n.h */,
 				7CE60F2C1C459B66008CE1E4 /* Info.plist */,
 			);
@@ -130,6 +139,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CE60F371C459C6D008CE1E4 /* LocalizedStringConvertible.swift in Sources */,
+				7CE60F351C459C6D008CE1E4 /* ISO3166.swift in Sources */,
+				7CE60F361C459C6D008CE1E4 /* ISO4217.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +240,7 @@
 		7CE60F301C459B66008CE1E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -238,12 +251,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.wellth.i18n;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		7CE60F311C459B66008CE1E4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
